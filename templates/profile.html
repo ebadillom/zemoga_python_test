@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>{{profile.title}}</h1>
+<img src="{{profile.image_url}}" alt="Avatar" style="width:200px">
+<p>@{{profile.twitter_user_name}}</p>
+<p>{{profile.description}}</p>
+
+<h2>TWEETS</h2>
+<table align="center">
+  {% for tweet in profile.tweets %}
+  <tr>
+    <td>{{tweet.text}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html> 
